@@ -1,3 +1,13 @@
+#### Update
+
+The fix was to move the declaration of `go_repositories` above the `gazelle_depenedencies`.
+Gazelle declares the same `com_github_fsnotify_fsnotify` so ours must be first.
+
+
+Relates: https://github.com/bazelbuild/bazel-gazelle/issues/865
+
+----------
+
 When building binary it appears to be ignoring the `replace` attribute
 of [go_repository](https://github.com/bazelbuild/bazel-gazelle/blob/ca2f105386b3860bf8555ca3ff681be5e3d422b3/repository.rst#go_repository).
 
